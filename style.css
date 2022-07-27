@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: rgb(37, 9, 37);
+  color: white;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 0 12px;
+  font-family: "Varela Round", sans-serif;
+}
+nav ul li {
+  list-style-type: none;
+}
+.gameContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 111px;
+  flex-wrap: wrap;
+ 
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Varela Round", sans-serif;
+  position: relative;
+}
+.line{
+    height: 3px ;
+    /* width: 30vw; */
+    width: 0vw;
+    position: absolute;
+    background-color: rgb(152, 115, 182);
+    transition: 1s ease-in-out;
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: rgb(228, 217, 237);
+}
+.gameInfo {
+  padding: 0 34px;
+  font-family: "Ubuntu", sans-serif;
+}
+.gameInfo h1 {
+  padding-bottom: 20px;
+}
+.img img {
+  height:0px ;
+    transition: height .3s linear;
+}
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+button {
+  height: 34px;
+  width: 61px;
+  background-color: white;
+  color: rgb(37, 9, 37);
+  border: none;
+  cursor: pointer;
+  outline: 1px solid rgb(228, 217, 237);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+button:hover {
+  background-color: rgb(228, 217, 237);
+  color: black;
+}
+.info {
+  font-size: 17px;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+    .gameInfo {
+        padding-top: 70px;
+        align-items: center;
+    }
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+      
+    }
+    .box {
+        font-size: 14vw;
+    }
+    .felx{
+        text-align: center;
+    }
+    .gameInfo h1 {
+        padding-bottom: 32px;
+    }
+}
